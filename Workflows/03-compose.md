@@ -228,40 +228,13 @@
 
 用 Write 工具写入完整文件。写入后用 Read 工具确认文件已正确保存。
 
-## Step 5: 联动产出（可选）
+## Step 5: Vault 集成建议
 
-### Topic Note
+检查当前环境是否安装了 `loom-maintain` skill。判断方式：在可用 skill 列表中查找 `loom-maintain`。
 
-如果适用，在 `02_Topic_Notes/` 下创建对应的 Topic Note：
+**如果存在 loom-maintain**：向用户建议运行 loom-maintain 处理 vault 集成（创建 Topic Note、更新索引、发现跨主题连接）。不需要 source-dive 自己操作 vault。
 
-```markdown
----
-title: {主题} 深度解析
-date: {YYYY-MM-DD}
-tags: [{主题标签}]
----
-
-# {主题}
-
-{2-3 句话概述这个项目/技术是什么}
-
-## 核心发现
-
-- {发现 1}
-- {发现 2}
-- {发现 3}
-
-## 深度解析
-
-→ [{主题} 深度解析](../../03_Content_Output/Longform/{topic}-deep-dive_{date}.md)
-```
-
-### Index 更新
-
-如果项目有索引文件（如 `00_Index/` 目录），更新相关索引：
-- `TOPIC_INDEX.md` — 添加主题条目
-- `TIMELINE_INDEX.md` — 添加时间线索引
-- `CONNECTION_INDEX.md` — 添加关联关系
+**如果不存在**：跳过此步，不做任何 vault 操作。source-dive 的输出是自包含的文章文件，不依赖 vault 结构。
 
 ## Step 6: 交付报告
 
@@ -273,10 +246,6 @@ tags: [{主题标签}]
 **文章**: {output_path}
 **字数**: 约 {N} 字
 **章节**: {N} 章
-
-**联动文件**:
-- Topic Note: {path} (如创建)
-- Index 更新: {哪些索引} (如更新)
 
 **核心发现摘要**:
 - {发现 1}
